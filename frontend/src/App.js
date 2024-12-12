@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 import LoginButton from './components/LoginButton';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
 
 function App() {
