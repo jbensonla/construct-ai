@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 import LoginButton from './components/LoginButton';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -19,13 +22,16 @@ function App() {
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}
-    >
+    >     
+      {/* Navbar at the top */}
+      <Navbar />
+     
       {/* Hero Section */}
       <div className="container-fluid py-5 mb-4 bg-light rounded-3">
         <div className="container px-5">
-          <h1 className="display-4 fw-bold">Welcome to My App</h1>
+          <h1 className="display-4 fw-bold">Project Portal</h1>
           <p className="lead">
-            This is where you can manage your projects, bid on new opportunities, and more.
+            Generative AI Project Management Bids, Contracts, Invoices, and Digital AI Assistant
           </p>
           <LoginButton />
         </div>
@@ -50,6 +56,8 @@ function App() {
           Coming soon: More features, categories, and enhancements to streamline your workflow!
         </p>
       </div>
+      
+      <Footer />
     </Auth0Provider>
   );
 }
